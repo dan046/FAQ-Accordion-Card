@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --background-color: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    --dividers: hsl(240, 5%, 91%);
+    --primary-text-very-saturated-dark-blue: hsl(238, 29%, 16%);
+    --primary-text-soft-red: hsl(14, 88%, 65%);
+    --neutral-text-very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --neutral-text-dark-grayish-blue: hsl(240, 6%, 50%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-image: var(--background-color);
+    overflow: hidden;
+}
+
+/* .main-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 1000px;
+    padding: 40px;
+    transition: max-height 0.5s ease-out;
+    position: relative;
+} */
+
+.image-container{
+    position: absolute;
+}
+
+.mobile-image{
+    display: none;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.bg-pattern{
+   position: absolute;
+}
+
+.desktop{
+    display: none;
+}
+
+.accordion-item{
+    grid-column: 2;
+}
+
+.accordion-item h1{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.accordion-item-header{
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.3s linear;
+}
+
+.accordion-item-header:hover{
+    color: var(--primary-text-soft-red);
+    transition: all 0.3s linear;
+}
+
+/* The effect */
+.accordion-item-body{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-item-body-content{
+    padding: 1rem;
+    line-height: 1.7rem;
+    border-top: 1px solid #111;
+}
+
+/* Desktop Property */
+@media screen and (min-width: 576px) {
+    .main-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        padding: 50px;
+        width: 80%;
+        max-width: 1000px;
+        border-radius: 20px;
+        column-gap: 100px;
+    }
+
+    .main-container h1{
+        grid-column: 2;
+    }
+
+    .accordion-item-header{
+        padding: 0;
+        min-height: 3.5rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+    .image-container{
+        position: absolute;
+        left: -85px;
+        z-index: 1;
+    }
+
+    .bg-pattern{
+        position: absolute;
+        left: -600px;
+        top: -250px;
+        z-index: 1;
+    }
+
+    .cube-container{
+        margin-top: 100px;
+        position: absolute;
+        left: 10px;
+        z-index: 2;
+    }
+    
+}
