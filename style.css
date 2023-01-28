@@ -74,7 +74,6 @@ body{
     padding: 0.5rem 3rem 0.5rem 1rem;
     min-height: 3.5rem;
     line-height: 1.5rem;
-    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,7 +102,7 @@ body{
 }
 
 /* Desktop Property */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1000px) {
     .main-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -114,21 +113,28 @@ body{
         position: relative;
         overflow: hidden;
         padding: 50px;
-        width: 80%;
+        width: 900px;
         max-width: 1000px;
         border-radius: 20px;
         column-gap: 100px;
+        height: 500px;
     }
 
     .main-container h1{
         grid-column: 2;
     }
 
+    .question {
+        font-size: 0.875;
+        line-height: 1.5;
+        padding-top: 1.125rem;
+        padding-bottom: 1.125rem;
+      }
+
     .accordion-item-header{
         padding: 0;
         min-height: 3.5rem;
         line-height: 1.5rem;
-        font-weight: 700;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -150,15 +156,21 @@ body{
     .bg-pattern{
         position: absolute;
         left: -600px;
-        top: -250px;
+        top: -280px;
         z-index: 1;
+    }
+
+    .outside-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
     }
 
     .cube-container{
         margin-top: 100px;
         position: absolute;
-        left: 10px;
-        z-index: 2;
+        z-index: 3;
+        left: -92px;
     }
-    
 }
